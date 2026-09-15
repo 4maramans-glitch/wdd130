@@ -219,6 +219,73 @@ footer {
     padding: 1.4rem 2rem;
 }
 
+.contact-page {
+    padding: 3rem 2rem;
+}
+
+.contact-info,
+.employees,
+.contact-form {
+    margin: 2rem 0;
+}
+
+.contact-info iframe {
+    border: 0;
+    height: 300px;
+    width: 100%;
+}
+
+.employees {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.employees h2 {
+    flex-basis: 100%;
+}
+
+.employees figure {
+    flex: 1 1 180px;
+    text-align: center;
+}
+
+.employees img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 650px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid var(--primary-color);
+    font: inherit;
+    padding: 0.6rem;
+}
+
+.contact-form fieldset {
+    border: 1px solid var(--primary-color);
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.contact-form button {
+    background: var(--primary-color);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+}
+
 .footer-contact p {
     margin: 0.15rem 0;
 }
