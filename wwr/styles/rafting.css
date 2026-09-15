@@ -79,7 +79,7 @@ nav a:focus-visible {
 }
 
 .hero::after {
-    background: linear-gradient(90deg, rgb(18 52 59 / 85%), rgb(18 52 59 / 8%));
+    background: linear-gradient(90deg, rgba(18, 52, 59, 0.85), rgba(18, 52, 59, 0.08));
     content: "";
     inset: 0;
     position: absolute;
@@ -113,7 +113,7 @@ article {
 
 .hero article {
     align-items: center;
-    background: rgb(245 240 232 / 94%);
+    background: rgba(245, 240, 232, 0.94);
     bottom: 2rem;
     display: flex;
     gap: 1.2rem;
