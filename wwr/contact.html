@@ -30,27 +30,26 @@
 
     <section class="contact-info" aria-labelledby="contact-info-heading">
       <h2 id="contact-info-heading">Reach Our Team</h2>
-      <p>Address: Add the company's street address here.</p>
+      <p>Address: Nile River Road, Jinja, Uganda</p>
       <p>Phone: <a href="tel:+254782125278">0782125278</a></p>
       <p>Email: <a href="mailto:4maramans@gmail.com">4maramans@gmail.com</a></p>
-      <!-- Replace about:blank with your Google Maps embed URL. -->
-      <iframe src="about:blank" title="Map showing the Canyon Current Rafting office"></iframe>
+      <iframe src="https://www.google.com/maps?q=Jinja%2C%20Uganda&output=embed"
+        title="Map showing the Canyon Current Rafting office"></iframe>
     </section>
 
     <section class="employees" aria-labelledby="employees-heading">
       <h2 id="employees-heading">Meet Our Team</h2>
-      <!-- Add three optimized employee images to images/ and update these paths. -->
       <figure>
-        <img src="images/employee-1.jpg" alt="Employee name and role">
-        <figcaption>River Guide: Add employee name</figcaption>
+        <img src="images/employee-1.jpg" alt="River guide preparing a rafting trip">
+        <figcaption>River Guide: Amina Okello</figcaption>
       </figure>
       <figure>
-        <img src="images/employee-2.jpg" alt="Employee name and role">
-        <figcaption>Safety Coordinator: Add employee name</figcaption>
+        <img src="images/employee-2.jpg" alt="Safety coordinator preparing river equipment">
+        <figcaption>Safety Coordinator: Daniel Kato</figcaption>
       </figure>
       <figure>
-        <img src="images/employee-3.jpg" alt="Employee name and role">
-        <figcaption>Trip Coordinator: Add employee name</figcaption>
+        <img src="images/employee-3.jpg" alt="Trip coordinator welcoming rafting guests">
+        <figcaption>Trip Coordinator: Sarah Namusoke</figcaption>
       </figure>
     </section>
 
@@ -63,15 +62,19 @@
         <input id="email" name="email" type="email" required>
         <fieldset>
           <legend>What is the purpose of your message?</legend>
-          <label><input type="radio" name="purpose" value="general" required> General
+          <label for="purpose-general"><input id="purpose-general" type="radio" name="purpose"
+              value="general" required> General
             Inquiry</label>
-          <label><input type="radio" name="purpose" value="reservation"> Reservation
+          <label for="purpose-reservation"><input id="purpose-reservation" type="radio"
+              name="purpose" value="reservation"> Reservation
             Question</label>
-          <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+          <label for="purpose-suggestion"><input id="purpose-suggestion" type="radio" name="purpose"
+              value="suggestion"> Website Suggestion</label>
         </fieldset>
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" required></textarea>
-        <label class="checkbox-label"><input type="checkbox" name="newsletter"> Please subscribe me
+        <label class="checkbox-label" for="newsletter"><input id="newsletter" type="checkbox"
+            name="newsletter"> Please subscribe me
           to the monthly newsletter</label>
         <button type="submit">Send Message</button>
       </form>
