@@ -34,10 +34,6 @@ header {
 nav {
   background-color: var(--dark-color);
   padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
 }
 
 nav a {
@@ -45,12 +41,7 @@ nav a {
   display: block;
   font-weight: 700;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-nav a:hover,
-nav a:focus-visible {
-  color: #f2c14e;
+  padding: 20px;
 }
 
 main {
@@ -82,11 +73,7 @@ p {
   padding: 0;
 }
 
-main p {
-  margin: 1rem 0;
-}
-
-.profile-image {
+main img {
   border: 1px solid var(--border-color);
   box-shadow: 2px 2px 5px rgb(0 0 0 / 0.2);
   float: right;
@@ -94,14 +81,6 @@ main p {
   margin: 0 0 1rem 1rem;
   padding: 0.25rem;
   width: 150px;
-}
-
-main img {
-  width: 150px;
-  height: auto;
-  border: 1px solid var(--border-color);
-  padding: 0.25rem;
-  box-shadow: 2px 2px 5px rgb(0 0 0 / 0.2);
 }
 
 aside {
