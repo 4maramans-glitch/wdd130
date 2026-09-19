@@ -36,10 +36,18 @@ nav a {
     text-decoration: none;
     color: #1b4965;
     font-weight: bold;
+    transition: color 180ms ease-in-out;
 }
 
 nav a:hover {
     color: #8f3f00;
+}
+
+nav a:focus-visible,
+.button:focus-visible,
+button:focus-visible {
+    outline: 3px solid #8f3f00;
+    outline-offset: 3px;
 }
 
 main {
@@ -68,6 +76,7 @@ main {
     background-color: rgba(0, 0, 0, 0.65);
     color: white;
     padding: 40px;
+    animation: hero-reveal 700ms ease-out both;
 }
 
 .hero-content h1 {
@@ -91,11 +100,13 @@ button {
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 180ms ease-in-out, transform 180ms ease-in-out;
 }
 
 .button:hover,
 button:hover {
     background-color: #6f2f00;
+    transform: translateY(-2px);
 }
 
 .home-intro,
@@ -137,6 +148,15 @@ h3 {
     text-align: center;
     padding: 20px;
     background-color: #eef4f5;
+    animation: card-reveal 600ms ease-out both;
+}
+
+.home-cards article:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.home-cards article:nth-child(3) {
+    animation-delay: 200ms;
 }
 
 .home-cards img {
@@ -241,6 +261,12 @@ textarea {
     padding: 20px;
     border: 1px solid #ddd;
     background-color: #fff;
+    transition: box-shadow 180ms ease-in-out, transform 180ms ease-in-out;
+}
+
+.trip-card:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
+    transform: translateY(-3px);
 }
 
 .trip-card img {
@@ -343,6 +369,42 @@ footer .socialmedia a {
 footer .socialmedia img {
     width: 45px;
     height: 45px;
+}
+
+@keyframes hero-reveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -46%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes card-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 @media (max-width: 800px) {
