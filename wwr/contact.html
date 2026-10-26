@@ -2,133 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Jinja River Adventures</title>
-    <meta name="description"
-      content="Contact Jinja River Adventures in Jinja, Uganda for rafting trips, bookings and adventure experiences.">
-    <meta name="author" content="Tadeo Owot">
-    <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | River Moroto</title>
+  <meta name="description" content="Contact River Moroto in Lira, Uganda for rafting trips, reservations, general questions, and adventure information.">
+  <meta name="author" content="Tadeo Owot">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
+  <header>
+    <img src="images/rafting_adventure11.webp" alt="River Moroto logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <img src="images/rafting_adventure10.webp" alt="Jinja River Adventures logo">
+  <main>
+    <section class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you. Ask us about bookings, safety questions, group trips, or your next adventure on the river.</p>
+    </section>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+    <section class="contact-layout">
+      <div class="contact-card">
+        <h2>Get in Touch</h2>
+        <p><strong>Address:</strong> 17 River Road, Lira, Uganda</p>
+        <p><strong>Phone:</strong> <a href="tel:+256772300145">+256 772 300 145</a></p>
+        <p><strong>Email:</strong> <a href="mailto:hello@rivermoroto.com">hello@rivermoroto.com</a></p>
+        <p><strong>Office Hours:</strong> Monday - Saturday, 8:00 AM - 5:00 PM</p>
+      </div>
 
-    <main>
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
 
-        <section class="contact-header">
-            <h1>Contact Us</h1>
-            <p>
-                We would love to hear from you. Contact us for bookings,
-                questions or more information about our rafting adventures.
-            </p>
-        </section>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
 
-        <section class="contact-info">
+          <fieldset>
+            <legend>What is the purpose of your message?</legend>
 
-            <div class="contact-details">
-                <h2>Get in Touch</h2>
+            <label>
+              <input type="radio" name="purpose" value="general" required>
+              General Inquiry
+            </label>
+            <label>
+              <input type="radio" name="purpose" value="reservation">
+              Reservation Question
+            </label>
+            <label>
+              <input type="radio" name="purpose" value="website">
+              Website Suggestion
+            </label>
+          </fieldset>
 
-                <p><strong>Address:</strong> Jinja, Uganda</p>
-                <p><strong>Phone:</strong> <a href="tel:0782125278">0782125278</a></p>
-                <p><strong>Email:</strong> info@jinjariveradventures.com</p>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-                <h2>Office Hours</h2>
+          <label class="checkbox-label">
+            <input type="checkbox" name="newsletter">
+            Please subscribe me to the monthly newsletter
+          </label>
 
-                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                <p>Saturday: 9:00 AM - 3:00 PM</p>
-                <p>Sunday: Closed</p>
-            </div>
+          <button type="submit">Send My Message</button>
+        </form>
+      </div>
+    </section>
 
-            <div class="contact-form">
+    <section class="team">
+      <h2>Meet Our Team</h2>
+      <div class="employee-grid">
+        <figure>
+          <img src="images/employee.webp" alt="Guide and team leader standing by the river">
+          <figcaption>Sam Okello — Lead Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting_adventure6.webp" alt="Rafting guide smiling while preparing equipment">
+          <figcaption>Nadia Auma — Safety Coordinator</figcaption>
+        </figure>
+        <figure>
+          <img src="images/rafting_adventure7.webp" alt="Adventure team member preparing for a river trip">
+          <figcaption>Tom Odyek — Trip Coordinator</figcaption>
+        </figure>
+      </div>
+    </section>
 
-                <h2>Send Us a Message</h2>
+    <section class="location">
+      <h2>Find Us</h2>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=Lira,Uganda&output=embed" title="Map showing River Moroto location in Lira, Uganda" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
 
-                <form>
-
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <fieldset>
-
-                        <legend>What is your purpose?</legend>
-
-                        <label>
-                            <input type="radio" name="purpose" value="general" required>
-                            General Information
-                        </label>
-
-                        <label>
-                            <input type="radio" name="purpose" value="booking">
-                            Booking
-                        </label>
-
-                        <label>
-                            <input type="radio" name="purpose" value="question">
-                            Question
-                        </label>
-
-                    </fieldset>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter">
-                        Please subscribe me to the newsletter.
-                    </label>
-
-                    <button type="submit">Send Message</button>
-
-                </form>
-
-            </div>
-
-        </section>
-
-        <section class="location">
-            <h2>Find Us</h2>
-
-            <div class="map">
-                <iframe src="https://www.google.com/maps?q=Jinja,Uganda&output=embed"
-                  title="Map showing our location" loading="lazy">
-                </iframe>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 | Jinja River Adventures | Tadeo Owot</p>
-
-        <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/facebook.svg" alt="Facebook">
-            </a>
-
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/x-bw.svg" alt="X">
-            </a>
-
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
-        </nav>
-    </footer>
-
+  <footer>
+    <p>&copy; 2026 River Moroto | Tadeo Owot</p>
+    <nav class="socialmedia" aria-label="Social media links">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/facebook.svg" alt="Facebook Icon">
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.svg" alt="LinkedIn Icon">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram.svg" alt="Instagram Icon">
+      </a>
+    </nav>
+  </footer>
 </body>
 
 </html>

@@ -112,14 +112,19 @@ h3 {
 }
 
 .history,
-.adventures {
+.adventures,
+.contact-header,
+.team,
+.location {
   padding: 2rem 1.5rem;
   background: var(--neutral);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .history h2,
-.adventures h2 {
+.adventures h2,
+.team h2,
+.location h2 {
   margin-bottom: 1rem;
 }
 
@@ -135,10 +140,15 @@ h3 {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.adventure-grid {
+.adventure-grid,
+.employee-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
+}
+
+.employee-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 figure {
@@ -160,6 +170,101 @@ figcaption {
   font-size: 0.85rem;
   color: var(--accent1-color);
   font-weight: 700;
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  background: #fff;
+}
+
+.contact-card,
+.contact-form {
+  background: #f8f8f8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.contact-card p {
+  margin: 0.75rem 0;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-form label,
+.contact-form legend {
+  font-weight: 700;
+  color: var(--accent1-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  font: inherit;
+}
+
+.contact-form fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 1rem;
+}
+
+.contact-form fieldset label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+.contact-form fieldset input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.3rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent1-color);
+}
+
+.map iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
 }
 
 footer {
@@ -213,7 +318,9 @@ footer p {
   }
 
   .history-grid,
-  .adventure-grid {
+  .adventure-grid,
+  .employee-grid,
+  .contact-layout {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -226,7 +333,9 @@ footer p {
 
 @media (max-width: 560px) {
   .history-grid,
-  .adventure-grid {
+  .adventure-grid,
+  .employee-grid,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -234,305 +343,4 @@ footer p {
     flex-direction: column;
     gap: 0.75rem;
   }
-}
-    outline: 3px solid rgb(27 73 101 / 20%);
-}
-
-.about-hero {
-    position: relative;
-}
-
-.about-hero img {
-    display: block;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.about-hero div {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    text-align: center;
-}
-
-.about-hero h1 {
-    margin: 0;
-}
-
-.company-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.company-info img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.mission-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.mission-grid article {
-    padding: 25px;
-    background-color: #eef4f5;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.trips-header {
-    text-align: center;
-    background-color: #dbeaf0;
-}
-
-.trips-header h1,
-.contact-header h1 {
-    font-size: 2.5rem;
-}
-
-.trips-grid {
-    display: grid;
-    gap: 30px;
-    padding: 40px 30px;
-}
-
-.trip-card {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 30px;
-    padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background-color: var(--surface);
-    transition: box-shadow 180ms ease-in-out, transform 180ms ease-in-out;
-}
-
-.trip-card:hover {
-    box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
-    transform: translateY(-3px);
-}
-
-.trip-card img {
-    display: block;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.trip-card ul {
-    margin: 15px 0 25px 20px;
-}
-
-.trip-cta {
-    text-align: center;
-    background-color: #dbeaf0;
-}
-
-.contact-header {
-    text-align: center;
-    background-color: #dbeaf0;
-}
-
-.contact-header p {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-details p {
-    margin-bottom: 10px;
-}
-
-.contact-form form {
-    display: grid;
-    gap: 10px;
-}
-
-fieldset {
-    border: 1px solid #aaa;
-    padding: 15px;
-    margin: 10px 0;
-}
-
-fieldset label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-fieldset input {
-    width: auto;
-    margin-right: 8px;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 10px 0;
-}
-
-.checkbox-label input {
-    width: auto;
-}
-
-.map iframe {
-    width: 100%;
-    height: 350px;
-    border: 0;
-}
-
-footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 25px 30px;
-    background-color: var(--river);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer .socialmedia {
-    display: flex;
-    gap: 15px;
-}
-
-footer .socialmedia a {
-    display: block;
-}
-
-footer .socialmedia img {
-    width: 45px;
-    height: 45px;
-    transition: transform 180ms ease-in-out;
-}
-
-footer .socialmedia a:hover img {
-    transform: translateY(-3px);
-}
-
-@keyframes hero-reveal {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -46%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-@keyframes card-reveal {
-    from {
-        opacity: 0;
-        transform: translateY(16px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-@media (max-width: 800px) {
-
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 15px;
-    }
-
-    header nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .home-cards,
-    .mission-grid,
-    .company-info,
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .trip-card {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 500px) {
-
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero > img {
-        height: 400px;
-    }
-
-    .hero-content {
-        padding: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.6rem;
-    }
-
-    .home-intro,
-    .newsletter,
-    .company-info,
-    .history,
-    .trips-header,
-    .trip-cta,
-    .contact-header,
-    .contact-info,
-    .location {
-        padding: 30px 20px;
-    }
 }
